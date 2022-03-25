@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/ivVideoThumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/translucent"
+        />
+    <TextView
+        android:id="@+id/tvVideoDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="00:00:00"
+        app:layout_constraintRight_toRightOf="@id/ivVideoThumbnail"
+        app:layout_constraintBottom_toBottomOf="@id/ivVideoThumbnail"
+        android:layout_margin="15dp"
+        android:background="@color/translucent"
+        />
+
+    <ImageView
+        android:id="@+id/ivAvatarThumbnail"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:srcCompat="@tools:sample/avatars"
+        app:layout_constraintTop_toBottomOf="@id/ivVideoThumbnail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvVideoTitle"
+        android:layout_margin="5dp"
+        />
+    <TextView
+        android:id="@+id/tvVideoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Awesome video title"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/ivVideoThumbnail"
+        app:layout_constraintLeft_toRightOf="@+id/ivAvatarThumbnail"
+        app:layout_constraintBottom_toTopOf="@id/tvChannelName"
+        android:maxLines="1"
+        />
+    <TextView
+        android:id="@+id/tvChannelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Channel"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@+id/ivAvatarThumbnail"
+        app:layout_constraintTop_toBottomOf="@id/tvVideoTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="5dp"
+        />
+    <TextView
+        android:id="@+id/tvVideoViewCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="555k"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/tvVideoTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tvChannelName"
+        android:layout_marginHorizontal="5dp"
+        />
+    <TextView
+        android:id="@+id/tvVideoDatePosted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6 days ago"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/tvVideoTitle"
+        app:layout_constraintLeft_toRightOf="@id/tvVideoViewCount"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="5dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
